@@ -6,24 +6,14 @@ function [out1 , out2] = qsort(ind, cf, l, r)
         while (ind(k) < mid)
             k = k + 1;
         end
-        while (ind(j) > mid)
+        while (a(j) > mid)
             j = j - 1;
         end
         if (k <= j)
-            w = ind(k);
-            ind(k) = ind(j);
-            ind(j) = w;
-            
-            tmp = cf(k);
-            cf(k) = cf(j);
-            cf(j) = tmp;
-            
+            w = a(k);
+            a(k) = a(j);
+            a(j) = w;
             k = k + 1;
             j = j -1;
         end
-    end
-    if (l < j)
-        qsort(ind, cf, l, j);
-        
-        
     end
